@@ -14,5 +14,5 @@ class TestSVC(TestBase):
 		await super().setup()
 	
 	async def test_is___SERVICE_NAME___healthy(self):
-		response = await self.api(_method='get', _endpoint="/api/__SERVICE_NAME__/healthy")
+		response = await self.api(_method='get', _endpoint="/api/v4/__SERVICE_NAME__/healthy")
 		assert response.status_code == 200
